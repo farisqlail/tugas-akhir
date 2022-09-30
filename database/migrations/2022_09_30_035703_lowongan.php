@@ -13,7 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('lowongan', function (Blueprint $table) {
+            $table->id();   
+            $table->string('posisi_lowongan');
+            $table->date('berlaku_sampai');
+            $table->longText('deskripsi_pekerjaan');
+            $table->longText('deskripsi_persyaratan');
+            $table->string('status_lowongan');
+            $table->timestamps();
+        });
     }
 
     /**

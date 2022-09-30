@@ -13,7 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('kriteria', function (Blueprint $table) {
+            $table->id();
+            $table->integer('id_lowongan');
+            $table->string('nama_kriteria');
+            $table->string('atribut_kriteria');
+            $table->integer('bobot_preferensi');
+            $table->timestamps();
+        });
     }
 
     /**

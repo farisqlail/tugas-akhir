@@ -13,7 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('bobot_kriterias', function (Blueprint $table) {
+        Schema::create('bobot_kriteria', function (Blueprint $table) {
+            $table->id();
             $table->integer('id_kriteria');
             $table->string('nama_bobot');
             $table->integer('jumlah_bobot');

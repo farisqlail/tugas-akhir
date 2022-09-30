@@ -13,7 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('jadwal_tes', function (Blueprint $table) {
+            $table->id();
+            $table->integer('id_lowongan');
+            $table->date('tanggal');
+            $table->date('durasi_tes');
+            $table->date('tanggal_notif');
+            $table->timestamps();
+        });
     }
 
     /**
